@@ -7,5 +7,9 @@ import (
 func InitRouter() {
 	r := gin.Default()
 	r.POST("/login", Login)
-	r.POST("/house", Add)
+	house := r.Group("/house")
+	{
+		house.POST("/in", In)
+		house.POST("/out", Out)
+	}
 }
