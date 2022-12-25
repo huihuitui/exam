@@ -12,4 +12,5 @@ func InitRouter() {
 		house.POST("/in", In)
 		house.POST("/out", Out)
 	}
+	r.Run()
 }
